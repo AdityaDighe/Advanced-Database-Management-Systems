@@ -1,0 +1,81 @@
+#exp 2
+
+use adityadighe_;
+optimize table adityadighe_;
+create index index1 on user_details (password);
+
+select username
+from user_details
+where first_name="mike";
+
+select sum(status)
+from user_details
+where first_name="mike"
+group by status;
+
+select password
+from user_details
+where first_name in (
+select first_name
+from user_details
+where first_name="mike"
+);
+
+
+select password
+from user_details
+where first_name="mike"
+order by status desc;
+
+select a.first_name
+from user_details a
+inner join user_details b
+on a.username=b.username;
+
+
+
+#check query monitor after running the query
+
+
+# for exp3 use one query from exp 2 and show query execution plan from the output
+
+
+
+
+
+#sakila data base
+
+show databases;
+use sakila;
+
+optimize table sakila;
+create index index61 on city(city_id);
+
+show tables;
+
+select last_update,city_id
+from city
+where country_id=60;
+
+select avg(city_id)
+from city
+where country_id=60
+group by last_update;
+
+select city_id, city
+from city
+where country_id in (
+select country_id
+from city
+where city="Aurora");
+
+select city,city_id
+from city
+where country_id=60
+order by last_update asc;
+
+select a.city
+from city as a
+inner join city b
+where a.country_id=b.country_id;
+

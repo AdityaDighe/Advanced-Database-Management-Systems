@@ -1,0 +1,25 @@
+{
+    "users": {
+      "123": {
+        "name": "John Doe",
+        "email": "john@example.com",
+        "phone": "555-1234",
+        "address": {
+          "area": "Downtown",
+          "city": "Cityville",
+          "zip": "12345"
+        }
+      },
+      "456": {
+        "name": "Jane Smith",
+        "email": "jane@example.com",
+        "phone": "555-5678",
+        "address": {
+          "area": "Suburbia",
+          "city": "Townsville",
+          "zip": "67890"
+        }
+      }
+    }
+}
+  
